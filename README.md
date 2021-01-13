@@ -15,7 +15,7 @@ WARNING:**Do not use it in production!**
 
 #### 支持的运营商
 - [x] 阿里云
-- [] 腾讯云
+- [ ] 腾讯云
 
 #### 食用方法
 - 查询当前机器IP地址
