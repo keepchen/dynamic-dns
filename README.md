@@ -3,7 +3,8 @@
 
 #### 简介
 该项目用于将指定域名解析到指定ip地址上。 
-WARNING:**Do not use it in production!**
+
+WARNING:**DO NOT use it in production!**
 
 #### 功能列表
 - [x] 查询域名解析列表
@@ -16,6 +17,32 @@ WARNING:**Do not use it in production!**
 #### 支持的运营商
 - [x] 阿里云
 - [ ] 腾讯云
+
+#### 安装方法
+- go get
+```shell
+go get github.com/keepchen/dynamic-dns/client
+go get github.com/keepchen/dynamic-dns/config
+go get github.com/keepchen/dynamic-dns/ipaddress
+```
+
+- go module
+
+1.声明头部引入
+
+```golang
+import (
+    "github.com/keepchen/dynamic-dns/client"
+    "github.com/keepchen/dynamic-dns/config"
+    "github.com/keepchen/dynamic-dns/ipaddress"
+)
+```
+
+2.运行go mod
+
+```shell
+go mod tidy
+```
 
 #### 食用方法
 - 查询当前机器IP地址
