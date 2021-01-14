@@ -44,9 +44,9 @@ type UpdateDNSRecordRequest struct {
 
 //DeleteDNSRecordRequest 删除解析记录请求结构体
 type DeleteDNSRecordRequest struct {
-	DomainName string
-	RR string
-	Lang string
-	Type string
+	DomainName   string
+	RR           string
+	Lang         string
+	Type         string
 	UserClientIP string
 }

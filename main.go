@@ -1,12 +1,12 @@
 package main
 
 import (
-	"github.com/keepchen/dynamic-dns/client"
-	"github.com/keepchen/dynamic-dns/config"
-	"github.com/keepchen/dynamic-dns/ipaddress"
 	"encoding/json"
 	"flag"
 	"fmt"
+	"github.com/keepchen/dynamic-dns/client"
+	"github.com/keepchen/dynamic-dns/config"
+	"github.com/keepchen/dynamic-dns/ipaddress"
 	"gopkg.in/yaml.v2"
 	"io/ioutil"
 )
@@ -55,9 +55,9 @@ func main() {
 
 	parser := func(res []byte) (string, error) {
 		type Decoder struct {
-			IP string `json:"ip"`
+			IP     string `json:"ip"`
 			Origin string `json:"origin"`
-			Port string `json:"port"`
+			Port   string `json:"port"`
 		}
 		var decode Decoder
 		err := json.Unmarshal(res, &decode)

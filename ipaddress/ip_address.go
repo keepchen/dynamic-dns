@@ -10,24 +10,24 @@ import (
 
 //Client 查询客户端
 type Client struct {
-	url string
+	url    string
 	parser func([]byte) (string, error)
 }
 
 //NewClient 实例化客户端
-func NewClient(url string, parser func([]byte)(string, error)) *Client {
+func NewClient(url string, parser func([]byte) (string, error)) *Client {
 	return &Client{
-		url: url,
+		url:    url,
 		parser: parser,
 	}
 }
 
 //Query 查询
 func (cli *Client) Query(method string, headers map[string]string,
-params map[string]interface{}, timeout int) (string, error) {
+	params map[string]interface{}, timeout int) (string, error) {
 	var (
 		httpMethod string
-		payload string
+		payload    string
 	)
 	if strings.ToUpper(method) == "POST" {
 		httpMethod = "POST"

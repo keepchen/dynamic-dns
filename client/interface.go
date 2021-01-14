@@ -1,5 +1,6 @@
 package client
 
+//IClient 公共方法接口
 type IClient interface {
 	GetDNSRecords(r *GetDNSRecordsRequest) (*GetDNSRecordsResponse, error)
 	GetDNSRecord(r *GetDNSRecordRequest) (*GetDNSRecordResponse, error)
